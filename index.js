@@ -339,7 +339,7 @@ WebTorrent.prototype.seed = function (input, opts, onseed) {
         if (existingTorrent) {
           torrent._destroy(new Error('Cannot add duplicate torrent ' + existingTorrent.infoHash))
         } else {
-          torrent._onTorrentId(torrentBuf)
+          torrent._onTorrentId(torrentBuf, opts.forced_id)
         }
       })
     })
